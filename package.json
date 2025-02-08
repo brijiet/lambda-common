@@ -1,0 +1,34 @@
+{
+  "name": "lambda_for_emailverify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "powershell Compress-Archive -Path ./dist, ./node_modules, ./package.json -DestinationPath ./your-lambda-function.zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.130",
+    "@types/node": "^20.10.4",
+    "@types/nodemailer": "^6.4.14",
+    "@types/uuid": "^9.0.8",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.0",
+    "aws-lambda": "^1.0.7",
+    "axios": "^1.6.2",
+    "date-fns": "^3.2.0",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "handlebars": "^4.7.8",
+    "mailgun.js": "^10.0.0",
+    "nodemailer": "^6.9.7",
+    "rimraf": "^5.0.5",
+    "uuid": "^9.0.1"
+  }
+}

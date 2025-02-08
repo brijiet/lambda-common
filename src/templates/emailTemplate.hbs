@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #e9e3e3;
+      padding: 2rem 5rem;
+    }
+
+    .container {
+      background-color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      background-color: #eef2ff;
+      box-shadow: 0px 2px 8px 0px rgba(55, 48, 163, 0.08);
+      padding: 0.8rem 1rem;
+      margin: 0;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .header h3 {
+      margin: 0;
+      margin-left: 0.2rem;
+    }
+
+    .header button {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--Indigo-indigo-600, #4f46e5);
+      background: var(--Base-White, #fff);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-left: 1rem;
+      transform: translateY(-50%);
+      color: #4f46e5;
+      font-weight: 800;
+      font-size: 0.875rem;
+    }
+
+    .content {
+      padding: 2rem 5rem 1.8rem 5rem;
+    }
+
+    .content h4 {
+      margin: 0 0 0.2rem 0;
+      font-weight: 400;
+    }
+
+    .content p {
+      margin: 0 0 1.5rem 0;
+      line-height: 1.5rem;
+    }
+
+    .verifyEmail table {
+      margin-top: 1.5rem;
+      background-color: #4f46e5;
+      border-radius: 8px;
+      padding: 0.8rem 4rem;
+      border: none;
+      font-size: 1rem;
+      color: white;
+    }
+
+    .verifyEmail {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer {
+      background: var(--Neutral-Grey-50, #f8fafc);
+      padding: 1.5rem 1rem;
+    }
+
+    .footer p {
+      text-align: center;
+      margin: 0;
+    }
+
+    .footer .Unsubscribe-wrapper span {
+      border-bottom: 1px solid #475569;
+      color: var(--Neutral-Grey-600, #475569);
+    }
+
+    .footer .Unsubscribe-wrapper .border-height {
+      height: 0.5rem;
+      border-left: 1px solid #e0e7ff;
+    }
+
+    .footer p {
+      margin: 0.5rem 0;
+      color: #64748b;
+    }
+
+    .footer .social-mediaIcon-align tr td {
+      padding: 0 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <button>JOB PORTAL</button>
+      <table align="center">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <img src="https://imgur.com/YOg2KXR.png" alt="profile-icon" />
+                </td>
+                <td>
+                  <h3>Verify your email address</h3>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="content">
+      <h4>Hi {{name}} 👋,</h4>
+      <h4>Welcome to RGT Job Portal</h4>
+      <p>
+        Please click the button below to verify your email address. If you did
+        not sign up to RGT, please ignore this email or contact us at
+        contact@ratnaglobaltech.com
+      </p>
+      <h4>Tom Tompson</h4>
+      <h4>RGT Support Team</h4>
+      <a href={{link}} class="verifyEmail">
+        <table>
+          <tr>
+            <td style="color: white;">
+              Verify email
+            </td>
+          </tr>
+        </table>
+      </a>
+    </div>
+
+    <div class="footer">
+      <table align="center">
+        <tr class="Unsubscribe-wrapper">
+          <td><span>Unsubscribe</span></td>
+          <td class="border-height">
+            <div></div>
+          </td>
+          <td><span>Report a problem</span></td>
+        </tr>
+      </table>
+      <p>
+        You have received this mail because your e-mail ID is registered with jobportal.com. This is a system-generated
+        e-mail,
+        please don't reply to this message.
+        <br>
+        Please do not pay any money to anyone who promises to find you a job. jobportal shall not have any
+        responsibility in this
+        regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information.
+      </p>
+      <table align="center" class="social-mediaIcon-align">
+        <tr>
+          <td align="center">
+            <a href="https://www.facebook.com/ratnaglobaltech" class="achorforLogo">
+              <img src="https://imgur.com/5Dz2dXb.png" alt="facebook" class="socialLogo">
+            </a>
+            <a href="https://www.instagram.com/ratnaglobaltech" class="achorforLogo">
+              <img src="https://imgur.com/KdWIvnJ.png" alt="instagram" class="socialLogo">
+            </a>
+
+            <a href="https://www.linkedin.com/company/ratnaglobaltech" class="achorforLogo">
+              <img src="https://imgur.com/pP6FASo.png" alt="linkedin" class="socialLogo">
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

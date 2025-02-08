@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .main-wrapper {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #e9e3e3;
+      padding: 2rem 5rem;
+    }
+
+    .main-wrapper .container {
+      background-color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .main-wrapper .header {
+      background-color: #eef2ff;
+      box-shadow: 0px 2px 8px 0px rgba(55, 48, 163, 0.08);
+      padding: 0.8rem 1rem;
+      margin: 0;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .main-wrapper .header h3 {
+      margin: 0;
+      margin-left: 0.2rem;
+    }
+
+    .main-wrapper .header a {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-left: 1rem;
+      transform: translateY(-50%);
+      color: #4f46e5;
+      font-weight: 800;
+      font-size: 0.875rem;
+    }
+
+    .content {
+      padding: 1.5rem 5rem 0 5rem;
+    }
+
+    .content h4 {
+      margin: 0 0 0.2rem 0;
+      font-weight: 400;
+    }
+
+    .content p {
+      margin: 0;
+      line-height: 1.5rem;
+    }
+
+    .applicant-wrapper {
+      padding: 1.5rem 5rem;
+      background-color: #fff;
+    }
+
+    .applicant>table {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    .applicant>table tr td:nth-last-child(1) {
+      float: right;
+    }
+
+    .applicant .card {
+      border-radius: 12px;
+      border: 1px solid #eef2ff;
+      box-shadow: 0px 4px 16px 0px rgba(49, 46, 129, 0.04);
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    .applicant .card table {
+      width: 100%;
+    }
+
+    .main-wrapper .footer {
+      background: var(--Neutral-Grey-50, #f8fafc);
+      padding: 1.5rem 1rem;
+    }
+
+    .main-wrapper .footer p {
+      word-break: break-all;
+      margin: 0;
+    }
+
+    .main-wrapper .footer .Unsubscribe-wrapper span {
+      border-bottom: 1px solid #475569;
+      color: var(--Neutral-Grey-600, #475569);
+    }
+
+    .main-wrapper .footer .Unsubscribe-wrapper .border-height {
+      height: 0.5rem;
+      border-left: 1px solid #e0e7ff;
+    }
+
+    .main-wrapper .footer p {
+      margin: 0.5rem 0;
+      color: #64748b;
+    }
+
+    .main-wrapper .footer .social-mediaIcon-align tr td {
+      padding: 0 0.5rem;
+    }
+
+    .main-wrapper .applicant a {
+      text-decoration: none;
+    }
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {}
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {}
+
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {}
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {}
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      .main-wrapper {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #e9e3e3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <div class="container">
+      <div class="header applicant-section-hide">
+        <table style="width: 100%">
+          <tr>
+            <td style="width: 20%">
+              <a href="">
+                <img
+                  src="https://jobportal123.blob.core.windows.net/staticimages/portalLogo.png"
+                  alt="LocationIcon" width="80px" />
+              </a>
+            </td>
+            <td>
+              <table align="center">
+                <tr>
+                  <td>
+                    <table>
+                      <tr>
+                        <td>
+                          <img
+                            src="https://jobportal123.blob.core.windows.net/emailimages/profile-icon.png"
+                            alt="profile-icon" />
+                        </td>
+                        <td>
+                          <h3>Verify your email address</h3>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td style="width: 20%"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="content">
+        <h4>Hi {{userName}} 👋,</h4>
+        <h4>Your job is now live on <a href={{jobPortal}}>Job Portal</a>.</h4>
+        <p>We have found the best matching candidates for your role.</p>
+      </div>
+      <div class="applicant-wrapper">
+        <div class="applicant">
+          <table>
+            <tr>
+              <td style="color: #312e81">
+                <span style="margin-right: 0.3rem">{{jobTitle}}</span>
+                <img
+                  src="https://jobportal123.blob.core.windows.net/emailimages/angular1.png"
+                  alt="" />
+              </td>
+              <td>
+                <span
+                  style="border-bottom: 1px solid black">{{jobApplicantsCount}}
+                  Applicants</span>
+              </td>
+            </tr>
+          </table>
+          <div class="card">
+            <table>
+              <tr>
+                <td>
+                  <img
+                    src="https://jobportal123.blob.core.windows.net/emailimages/profile.png"
+                    alt="" />
+                </td>
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <span style="
+                              margin-right: 0.3rem;
+                              color: #0f172a;
+                              font-weight: 700;
+                            ">{{jobSeekerName}}</span>
+                        <img
+                          src="https://jobportal123.blob.core.windows.net/emailimages/angular1.png"
+                          alt="angularIcon" />
+                      </td>
+                      <td style="
+                            border-radius: 4px;
+                            background: #f1f5f9;
+                            padding: 0.5rem 0.8rem;
+                            text-align: center;
+                          ">
+                        <span
+                          style="color: #4f46e5">{{skillsMatchedPercent}}</span>
+                        skills matched
+                      </td>
+                    </tr>
+                  </table>
+                  <p style="margin: 0; color: #64748b">
+                    {{jobSeekerTitle}}
+                  </p>
+                </td>
+              </tr>
+            </table>
+            <div style="
+                  border-bottom: 1px solid #e0e7ff;
+                  width: 100%;
+                  margin: 0.8rem 0;
+                "></div>
+            <table style="color: #64748b">
+              <tr>
+                <td>
+                  <img
+                    src="https://jobportal123.blob.core.windows.net/emailimages/location.png"
+                    alt="location" />
+                  <span
+                    style="margin-left: 0.4rem">{{jobSeekerLocations}}</span>
+                </td>
+                <td>
+                  <img
+                    src="https://jobportal123.blob.core.windows.net/emailimages/experience.png"
+                    alt="experience" />
+                  <span
+                    style="margin-left: 0.4rem">{{jobSeekerExperience}}</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img
+                    src="https://jobportal123.blob.core.windows.net/emailimages/time.png"
+                    alt="time" />
+                  <span
+                    style="margin-left: 0.4rem">{{jobSeekerNoticePeriod}}</span>
+                </td>
+                <td>
+                  <img
+                    src="https://jobportal123.blob.core.windows.net/emailimages/moneyLogo.png"
+                    alt="moneyLogo" />
+                  <span
+                    style="margin-left: 0.4rem">{{jobSeekerCurrentSalary}}</span>
+                </td>
+              </tr>
+            </table>
+            <div style="
+                  border-bottom: 1px solid #e0e7ff;
+                  width: 100%;
+                  margin: 0.8rem 0;
+                "></div>
+            <table>
+              <tr>
+                <td style="
+                      color: #0f172a;
+                      font-weight: 700;
+                      padding-right: 0.5rem;
+                      padding-bottom: 0.5rem;
+                      position: relative;
+                    ">
+                  <span>Education</span>
+                </td>
+                <td style="color: #64748b; padding-bottom: 0.5rem">
+                  {{jobSeekerEducation}}
+                </td>
+              </tr>
+              <tr>
+                <td style="
+                      color: #0f172a;
+                      font-weight: 700;
+                      padding-right: 0.5rem;
+                      padding-bottom: 0.5rem;
+                      position: relative;
+                    ">
+                  <span style="position: absolute; top: 0">Key Skills</span>
+                </td>
+                <td style="color: #64748b; padding-bottom: 0.5rem">
+                  <p style="margin: 0">
+                    {{jobSeekerKeySkills}}
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="applicant-section-hide">
+            <table style="width: 100%">
+              <tr>
+                <td>
+                  <a href={{applicantViewLink}} style="
+                        color: white;
+                        background-color: #4f46e5;
+                        border-radius: 8px;
+                        width: 80%;
+                        display: inline-block;
+                        padding: 0.5rem 0;
+                        text-align: center;
+                        border: none;
+                        font-size: 1rem;
+                      ">View</a>
+                </td>
+                <td style="text-align: center">
+                  <a href={{resumeLink}} style="
+                        color: black;
+                        background-color: #eef2ff;
+                        border-radius: 8px;
+                        width: 80%;
+                        display: inline-block;
+                        padding: 0.5rem 0;
+                        text-align: center;
+                        border: none;
+                        font-size: 1rem;
+                      ">Download</a>
+                </td>
+                <td style="text-align: right">
+                  <a href={{connectLink}} style="
+                        color: black;
+                        background-color: #eef2ff;
+                        border-radius: 8px;
+                        width: 80%;
+                        display: inline-block;
+                        padding: 0.5rem 0;
+                        text-align: center;
+                        border: none;
+                        font-size: 1rem;
+                      ">Contact</a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="footer applicant-section-hide">
+        <table align="center">
+          <tr class="Unsubscribe-wrapper">
+            <td><span>Unsubscribe</span></td>
+            <td class="border-height">
+              <div></div>
+            </td>
+            <td><span>Report a problem</span></td>
+          </tr>
+        </table>
+        <p>
+          You have received this mail because your e-mail ID is registered with
+          jobportal.com. This is a system-generated e-mail, please don't reply
+          to this message.
+          Please do not pay any money to anyone who promises to find you a job.
+          jobportal shall not have any
+          responsibility in this regard. We recommend that you visit our Terms &
+          Conditions and the
+          Security Advice for more information.
+        </p>
+        <table align="center" class="social-mediaIcon-align">
+          <tr>
+            <td>
+              <a href="https://www.linkedin.com/company/ratnaglobaltech">
+                <img
+                  src="https://jobportal123.blob.core.windows.net/emailimages/linkdine.png"
+                  alt="linkedin" />
+              </a>
+            </td>
+            <td>
+              <a href="https://www.facebook.com/ratnaglobaltech">
+                <img
+                  src="https://jobportal123.blob.core.windows.net/emailimages/facebook.png"
+                  alt="facebook" />
+              </a>
+            </td>
+            <td>
+              <a href="https://www.instagram.com/ratnaglobaltech">
+                <img
+                  src="https://jobportal123.blob.core.windows.net/emailimages/instagram.png"
+                  alt="instagram" />
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

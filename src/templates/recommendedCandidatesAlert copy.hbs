@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body style="
+      box-sizing: border-box;
+    ">
+  <div style="
+background-color: rgb(138, 134, 134);
+padding:2rem 10rem;
+box-sizing: border-box;
+    ">
+    <div style="background-color: white; padding: 1rem 1.5rem;box-sizing: border-box; overflow: hidden;">
+      <table style="width: 100%; margin: 0; padding: 0">
+        <tr>
+          <td style="text-align: left">
+            <h3 style="margin: 0; padding: 0">Jop Portal</h3>
+          </td>
+          <td style="text-align: right">
+            <h3 style="margin: 0; padding: 0">Job Posting</h3>
+          </td>
+        </tr>
+      </table>
+      <h3 style="
+          background-color: rgb(7, 20, 101);
+          color: white;
+          text-align: center;
+          margin: 0.2rem 0 1.5rem 0;
+          padding: 0.5rem 0;
+        ">
+        Best candidate recommendations for your job
+      </h3>
+      <p>Hi {{job.userName}},</p>
+      <p>
+        Your job is now live on Jobportal.com. We have found the best matching
+        candidates for your role.
+      </p>
+      <a href="" style="color: blue">{{job.title}}</a>
+      <table>
+        <tr>
+          {{!-- <td style="padding: 0.3rem 0.3rem">4-9 Yrs</td> --}}
+          <td style="padding: 0.3rem 0.3rem">{{job.experience}}</td>
+          <td style="padding: 0.3rem 0.3rem">{{job.payScale}}</td>
+          <td style="padding: 0.3rem 0.3rem">{{job.location}}</td>
+        </tr>
+      </table>
+      {{#each jobSeekers}}
+      <div style="
+              background-color: rgb(238, 238, 238);
+              padding: 0.8rem;
+              margin: 0.5rem 0;
+            ">
+        <h3 style="margin: 0 0 0.5rem 0; padding: 0">{{jobSeekerName}}</h3>
+        <p style="padding: 0; margin: 0">{{jobDetails}}</p>
+        <table>
+          <tr>
+            <td style="padding:0.8rem 2rem 0 0">{{experience}}</td>
+            <td style="
+                    word-wrap: break-word;
+                    line-break: auto;
+                    padding-top:0.8rem;
+                  ">
+              {{currentSalary}}
+            </td>
+          </tr>
+          <tr>
+            {{#if jobSeekerLocations}}
+            <td style="padding: 0.8rem 2rem 0 0">Location</td>
+            <td style="
+                              word-wrap: break-word;
+                              line-break: auto;
+                              padding-top:0.8rem;
+                            ">
+              {{jobSeekerLocations}}
+            </td>
+            {{/if}}
+          </tr>
+          <tr>
+            <td style="padding: 0.8rem 2rem 0 0">Education</td>
+            <td style="
+                    word-wrap: break-word;
+                    line-break: auto;
+                    padding-top:0.8rem;
+                  ">
+              {{education}}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0.8rem 2rem 0 0">Keyskills</td>
+            <td style="
+                    word-wrap: break-word;
+                    line-break: auto;
+                    padding-top:0.8rem;
+                  ">
+              {{jobSeekerSkills}}
+            </td>
+          </tr>
+        </table>
+      </div>
+      {{/each}}
+      {{!-- <div style="
+          background-color: rgb(238, 238, 238);
+          padding: 0.8rem;
+          margin: 0.5rem 0;
+        ">
+        <h3 style="margin: 0 0 0.5rem 0; padding: 0">Vishal raj thakur</h3>
+        <p style="padding: 0; margin: 0">Team Lead Sales at Leadsquared.com</p>
+        <table>
+          <tr>
+            <td style="padding:0.8rem 2rem 0 0">5Y 2m</td>
+            <td style="
+                word-wrap: break-word;
+                line-break: auto;
+                padding-top:0.8rem;
+              ">
+              15.50 Lacs
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 0.8rem 2rem 0 0">Location</td>
+            <td style="
+                word-wrap: break-word;
+                line-break: auto;
+                padding-top:0.8rem;
+              ">
+              Location New Delhi(Preferred Location is
+              Gurgaon/Gurugram,Noida,Bangalore/Bengaluru,Mumbai,Delhi / NCR)
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 0.8rem 2rem 0 0">Education</td>
+            <td style="
+                word-wrap: break-word;
+                line-break: auto;
+                padding-top:0.8rem;
+              ">
+              B.Tech/B.E. at Maharishi Dayanand University (MDU), Rohtak
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0.8rem 2rem 0 0">Keyskills</td>
+            <td style="
+                word-wrap: break-word;
+                line-break: auto;
+                padding-top:0.8rem;
+              ">
+              Team Management,Sales,B2B Sales,Corporate Sales,International
+              Sales,Inside Sales,Cold Calling,Saas Sales
+            </td>
+          </tr>
+        </table>
+      </div> --}}
+      <table align="center" style="padding-top: 1rem">
+        <tr>
+          <td>
+            <button style="
+                text-align: center;
+                background-color: rgb(65, 138, 210);
+                color: white;
+                outline: none;
+                border: none;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+              ">
+              View All Candidates
+            </button>
+          </td>
+        </tr>
+      </table>
+      <hr style="margin: 1.5rem 0" />
+      <table style="width: 100%;margin-bottom:0.5rem;">
+        <tr>
+          <td align="center">Contact us:</td>
+          <td align="center"><a href="" style="color: blue">support@jobportal.com</a></td>
+          <td align="center">1111-111-1111</td>
+        </tr>
+      </table>
+    </div>
+    <div style="background-color: rgb(7, 20, 101);padding:0.8rem 0">
+      <h3
+        style="color: white;width: 100%;text-align: center;line-break: auto;word-wrap: break-word;padding: 0;margin: 0;">
+        job portal hiring suite | Evolve to new age recruitment solution
+      </h3>
+    </div>
+  </div>
+
+</body>
+
+</html>
