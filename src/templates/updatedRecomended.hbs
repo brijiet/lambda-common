@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #e9e3e3;
+      padding: 2rem 5rem;
+    }
+
+    .container {
+      background-color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      background-color: #eef2ff;
+      box-shadow: 0px 2px 8px 0px rgba(55, 48, 163, 0.08);
+      padding: 0.8rem 1rem;
+      margin: 0;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .header h3 {
+      margin: 0;
+      margin-left: 0.2rem;
+    }
+
+    .header button {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--Indigo-indigo-600, #4f46e5);
+      background: var(--Base-White, #fff);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-left: 1rem;
+      transform: translateY(-50%);
+      color: #4f46e5;
+      font-weight: 800;
+      font-size: 0.875rem;
+    }
+
+    .banner {
+      background: linear-gradient(98deg,
+          #fee 0.82%,
+          #fbeeff 66.74%,
+          #fbeeff 114.84%);
+      padding: 1.5rem 0;
+    }
+
+    .banner .title h3 {
+      margin: 0 0 0.1rem 0;
+      text-align: center;
+    }
+
+    .banner .title p {
+      margin: 0 0 0.5rem 0;
+      text-align: center;
+    }
+
+    .banner .sub-title td {
+      position: relative;
+    }
+
+    .banner .sub-title .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 40px;
+      background: var(--Indigo-Indigo-50, #eef2ff);
+      box-shadow: 0px 2px 8px 0px rgba(55, 48, 163, 0.08);
+      position: relative;
+    }
+
+    .banner .sub-title .icon img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .banner .sub-title .complete-profile td {
+      width: 12rem;
+    }
+
+    .banner .sub-title .complete-profile p {
+      margin: 0;
+      text-align: center;
+    }
+
+    .jobs {
+      padding: 1.8125rem 5rem;
+    }
+
+    .jobs .allJobs {
+      border-radius: 8px;
+      background: var(--Indigo-indigo-600, #4f46e5);
+      padding: 0.8rem 5rem;
+      border: none;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .job_list {
+      border-radius: 12px;
+      border: 1px solid #e0e7ff;
+      margin: 1.8125rem 0;
+      padding: 1.25rem;
+    }
+
+    .job_list tr td {
+      position: relative;
+    }
+
+    .job_list tr .icon img {
+      position: absolute;
+      top: 0;
+    }
+
+    .job_list tr td .title {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .job_list tr td .sub-title {
+      margin: 0 0 0.8rem 0;
+      color: #64748b;
+      font-weight: 400;
+    }
+
+    .job_list table {
+      width: 100%;
+    }
+
+    .job_list table button {
+      border-radius: 4px;
+      padding: 0.5rem 0.75rem;
+      border: none;
+    }
+
+    .job_list table .hybrid {
+      background: var(--Warning-Orange-50, #fffaf2);
+      color: var(--Warning-Orange-500, #ea580c);
+    }
+
+    .job_list table .full-time {
+      background: var(--Success-Green-50, #f0fff5);
+      color: var(--Success-Green-500, #02ad41);
+    }
+
+    .job_list .apply-job-wrapper {
+      position: relative;
+    }
+
+    .job_list .apply-job-wrapper a {
+      text-decoration: none;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #312e81;
+    }
+
+    .job_list .apply-job-wrapper a img {
+      margin-top: 0.4rem;
+    }
+
+    .footer {
+      background: var(--Neutral-Grey-50, #f8fafc);
+      padding: 1.5rem 1rem;
+    }
+
+    .footer p {
+      text-align: center;
+      margin: 0;
+    }
+
+    .footer .Unsubscribe-wrapper span {
+      border-bottom: 1px solid #475569;
+      color: var(--Neutral-Grey-600, #475569);
+    }
+
+    .footer .Unsubscribe-wrapper .border-height {
+      height: 0.5rem;
+      border-left: 1px solid #e0e7ff;
+    }
+
+    .footer p {
+      margin: 0.5rem 0;
+      color: #64748b;
+    }
+
+    .footer .social-mediaIcon-align tr td {
+      padding: 0 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <button>JOB PORTAL</button>
+      <table align="center">
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td>
+                  <img src="https://imgur.com/MPZiMt1.png" alt="briefcase" />
+                </td>
+                <td>
+                  <h3>Job Recommendations</h3>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="banner">
+      <table align="center" class="title">
+        <tr>
+          <td>
+            <h3>Hi{{name}}👋</h3>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p>Your perfect job is just a few steps away</p>
+          </td>
+        </tr>
+      </table>
+      <table align="center" class="sub-title">
+        <tr>
+          <td>
+            <div class="icon">
+              <img src="https://imgur.com/YOg2KXR.png" alt="profileIcon" />
+            </div>
+          </td>
+          <td>
+            <div style="border-bottom: 2px dashed gray; width: 10em"></div>
+          </td>
+          <td>
+            <div class="icon">
+              <img src="https://imgur.com/BeFXJGh.png" alt="briefcase" />
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table align="center" class="sub-title">
+        <tr class="complete-profile">
+          <td>
+            <p>Complete your profile</p>
+          </td>
+          <td>
+            <p>Find a perfect job</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="jobs">
+      {{#each jobs}}
+      <a class="job_list" href={{jobLink}}>
+        <table>
+          <tr>
+            <td class="icon">
+              <img src="https://imgur.com/OF4M4wU.png" alt="companyLogo" />
+            </td>
+            <td>
+              <h4 class="title">{{title}}</h4>
+              <h4 class="sub-title">{{company.title}}</h4>
+            </td>
+          </tr>
+          <tr>
+            <td><button class="hybrid">{{workMode.title}}</button></td>
+            <td>
+              <table class="apply-job-wrapper">
+                <tr>
+                  <td><button class="full-time">{{employmentType.title}}</button></td>
+                  <td>
+                    <a href="">
+                      <table>
+                        <tr>
+                          <td>Apply</td>
+                          <td>
+                            <img src="https://imgur.com/Dt7yewb.png" alt="angularIcon" />
+                          </td>
+                        </tr>
+                      </table>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </a>
+      {{/each}}
+      <table align="center">
+        <tr>
+          <td>
+            <a class="allJobs" href={{jobLinkAll}}>All Jobs</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer">
+      <table align="center">
+        <tr class="Unsubscribe-wrapper">
+          <td><span>Unsubscribe</span></td>
+          <td class="border-height">
+            <div></div>
+          </td>
+          <td><span>Report a problem</span></td>
+        </tr>
+      </table>
+      <p>
+        You have received this mail because your e-mail ID is registered with jobportal.com. This is a system-generated
+        e-mail,
+        please don't reply to this message.
+        <br>
+        Please do not pay any money to anyone who promises to find you a job. jobportal shall not have any
+        responsibility in this
+        regard. We recommend that you visit our Terms & Conditions and the Security Advice for more information.
+      </p>
+      <table align="center" class="social-mediaIcon-align">
+        <tr>
+          <td>
+            <img src="https://imgur.com/pP6FASo.png" alt="linkedin" />
+          </td>
+          <td>
+            <img src="https://imgur.com/5Dz2dXb.png" alt="facebook" />
+          </td>
+          <td>
+            <img src="https://imgur.com/KdWIvnJ.png" alt="instagram" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>
